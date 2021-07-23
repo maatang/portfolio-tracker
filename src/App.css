@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #f7f7f7;
 }
 
 .App-logo {
@@ -26,6 +27,29 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.LineGraphContainerMed {
+  height: 400px;
+  width: 50%;
+}
+
+.CenterRow {
+  display: flex;
+  justify-content: center;
+}
+
+.FlexCentered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .LineGraphContainerMed {
+    height: 400px;
+    width: 100%;
+  }
 }
 
 @keyframes App-logo-spin {
