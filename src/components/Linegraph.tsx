@@ -46,7 +46,7 @@ const data = [
   },
 ];
 
-function Linegraph() {
+function LineGraph() {
     return (
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
@@ -72,4 +72,4 @@ function Linegraph() {
     );
 }
 
-export default Linegraph;
+export default LineGraph;

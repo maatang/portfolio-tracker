@@ -1,5 +1,6 @@
 import './App.css';
-import Linegraph from './components/Linegraph';
+import LineGraph from './components/LineGraph';
+import Cryptoinfo from './components/CryptoInfo';
 
 function App() {
   return (
@@ -7,7 +8,10 @@ function App() {
       <h2>Investment Portfolio</h2>
       <div className="CenterRow">
         <div className="LineGraphContainerMed FlexCentered">
-          <Linegraph/>
+          <LineGraph/>
+        </div>
+        <div>
+          <Cryptoinfo/>
         </div>
       </div>
     </div>
