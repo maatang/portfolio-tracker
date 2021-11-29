@@ -11,9 +11,7 @@ function Cryptoinfo() {
           if (isLoading) return "Loading..."
           if (error) return `Something went wrong: ${error.message}`
           if (data) {
-            // TODO make this line cleaner update api to simply return the price.
-            const cryptoPrice = Number(data.result[Object.keys(data.result)[0]].a[0]).toFixed(2);
-            console.log(cryptoPrice);
+            const cryptoPrice = Number(data.priceInUsd).toFixed(2);
             return `BTC Price: $${cryptoPrice}`
           } 
         }}
