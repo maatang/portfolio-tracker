@@ -4,6 +4,7 @@ import Avatar from '@mui/material/Avatar';
 import CryptoInfo from './CryptoInfo';
 import btcImage from '../img/BTC.png';
 import ethImage from '../img/ETH.png';
+import adaImage from '../img/ADA.png';
 
 interface getCryptoListButtonInfo {
     ticker: string
@@ -11,7 +12,8 @@ interface getCryptoListButtonInfo {
 
 const cryptoImageDictionary: {[id: string]: string; } = {
     "BTC": btcImage,
-    "ETH": ethImage
+    "ETH": ethImage,
+    "ADA": adaImage
 }
 
 function CryptoListButton(prop: getCryptoListButtonInfo) {
@@ -19,7 +21,7 @@ function CryptoListButton(prop: getCryptoListButtonInfo) {
   return (
     <ListItemButton>
     <ListItemAvatar>
-        <Avatar>
+        <Avatar sx={{  bgcolor: 'background.paper'}}>
             <img src={cryptoImageDictionary[prop.ticker]}/>
         </Avatar>
     </ListItemAvatar>

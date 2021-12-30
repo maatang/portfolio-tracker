@@ -1,7 +1,8 @@
-import { StyledEngineProvider } from '@mui/material';
-import Async from 'react-async';
+import * as React from 'react';
 import sleep from '../common/sleep';
 import { useState, useEffect } from 'react';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 interface getCryptoInfo {
   ticker: string
@@ -40,7 +41,14 @@ function CryptoInfo(props: getCryptoInfo) {
 
   return (
     <div>
-      {props.ticker} - ${(Number(cryptoPrice).toFixed(2))}
+      {isLoading && (
+        <Box sx={{ width: '125px' }}>
+          <LinearProgress />
+        </Box>
+      )}
+      {!isLoading && cryptoPrice && (
+        <div>{props.ticker} - ${(Number(cryptoPrice).toFixed(2))}</div>
+      )}
     </div>
   );
 }
