@@ -1,6 +1,6 @@
 import './App.css';
 import LineGraph from './components/LineGraph';
-import Cryptoinfo from './components/CryptoInfo';
+import CryptoList from './components/CryptoList'
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
           <LineGraph/>
         </div>
         <div>
-          <Cryptoinfo/>
+          <CryptoList/>
         </div>
       </div>
     </div>

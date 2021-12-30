@@ -1,6 +1,6 @@
 import Async from 'react-async';
 
-function Cryptoinfo() {
+function CryptoInfo() {
   const btcPrice = () => fetch("http://localhost:8000/asset-api/cryptoprice/BTC")
   .then(res => (res.ok ? res : Promise.reject(res)))
   .then(res => res.json())
@@ -12,7 +12,7 @@ function Cryptoinfo() {
           if (error) return `Something went wrong: ${error.message}`
           if (data) {
             const cryptoPrice = Number(data.priceInUsd).toFixed(2);
-            return `BTC Price: $${cryptoPrice}`
+            return `BTC - $${cryptoPrice}`
           } 
         }}
         </Async>
@@ -20,4 +20,4 @@ function Cryptoinfo() {
     );
 }
 
-export default Cryptoinfo;
+export default CryptoInfo;
